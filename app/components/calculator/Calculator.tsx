@@ -7,6 +7,7 @@ import InputRow from "./InputRow";
 import ResultCard from "./ResultCard";
 import ContainerBar from "./ContainerBar";
 import UnitToggle from "./UnitToggle";
+import SEOContent from "../SEOContent";
 import { Plus, RotateCcw } from "lucide-react";
 
 export default function Calculator() {
@@ -84,8 +85,8 @@ export default function Calculator() {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 relative pb-20 md:pb-0">
-      <div className="md:col-span-8 space-y-6">
+    <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 relative pb-20 md:pb-0">
+      <div className="xl:col-span-8 space-y-6">
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
           <div className="flex justify-between items-center mb-6">
             <UnitToggle unit={unit} onToggle={setUnit} />
@@ -119,10 +120,11 @@ export default function Calculator() {
             </button>
           </div>
         </div>
+        <SEOContent />
 
       </div>
 
-      <div className="lg:col-span-5 xl:col-span-4 relative" id="results-section">
+      <div className="xl:col-span-4 h-full relative" id="results-section">
         <div className="sticky top-24 space-y-6">
           <ResultCard totals={totals} />
           <ContainerBar totalCbm={totals.cbm} />
