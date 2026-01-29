@@ -7,6 +7,7 @@ import InputRow from "./InputRow";
 import ResultCard from "./ResultCard";
 import ContainerBar from "./ContainerBar";
 import UnitToggle from "./UnitToggle";
+import SEOContent from "../SEOContent";
 import { Plus, RotateCcw } from "lucide-react";
 
 export default function Calculator() {
@@ -119,6 +120,9 @@ export default function Calculator() {
             </button>
           </div>
         </div>
+
+        {/* SEO Content placed here to fill the left column blank space */}
+        <SEOContent />
       </div>
 
       <div className="lg:col-span-5 xl:col-span-4 relative" id="results-section">
