@@ -1,7 +1,7 @@
 "use client";
 
 import { UnitSystem } from "../../lib/types";
-import { clsx } from "clsx";
+import clsx from "clsx";
 
 interface UnitToggleProps {
   unit: UnitSystem;

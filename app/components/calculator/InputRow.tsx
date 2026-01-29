@@ -2,7 +2,7 @@
 
 import { CargoItem, UnitSystem } from "../../lib/types";
 import { Trash2 } from "lucide-react";
-import { clsx } from "clsx";
+import clsx from "clsx";
 
 interface InputRowProps {
   item: CargoItem;

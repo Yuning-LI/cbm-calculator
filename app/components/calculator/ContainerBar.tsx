@@ -1,7 +1,7 @@
 "use client";
 
 import { CONTAINER_SPECS, SAFETY_FACTOR } from "../../lib/constants";
-import { clsx } from "clsx";
+import clsx from "clsx";
 import { AlertTriangle, CheckCircle, XCircle } from "lucide-react";
 
 interface ContainerBarProps {
