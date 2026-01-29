@@ -121,8 +121,8 @@ export default function Calculator() {
         </div>
       </div>
 
-      <div className="md:col-span-4 lg:col-span-4" id="results-section">
-        <div className="sticky top-24 h-fit space-y-6">
+      <div className="lg:col-span-5 xl:col-span-4 relative" id="results-section">
+        <div className="sticky top-24 space-y-6">
           <ResultCard totals={totals} unit={unit} />
           <ContainerBar totalCbm={totals.cbm} />
           
