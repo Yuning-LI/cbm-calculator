@@ -1,10 +1,10 @@
 import React from 'react';
+import SEOArticle from './SEOArticle';
 
 const SEOContent = () => {
   return (
     <div className="space-y-12">
-      <article className="prose prose-slate max-w-none bg-white p-8 rounded-lg shadow-sm border border-slate-100">
-        <h2 className="text-2xl font-bold text-slate-800 mb-4">How to Calculate CBM (Cubic Meter)?</h2>
+      <SEOArticle title="How to Calculate CBM (Cubic Meter)?">
         <p>
           CBM (Cubic Meter) is the standard unit of volume used in international freight to determine shipping charges. 
           Knowing how to calculate CBM accurately is crucial for optimizing your shipping costs.
@@ -27,10 +27,9 @@ const SEOContent = () => {
         <p>
           If you are shipping 100 such cartons, the total volume would be 0.06 × 100 = 6.00 CBM.
         </p>
-      </article>
+      </SEOArticle>
 
-      <article className="prose prose-slate max-w-none bg-white p-8 rounded-lg shadow-sm border border-slate-100">
-        <h2 className="text-2xl font-bold text-slate-800 mb-4">How to Calculate CBM from Inches?</h2>
+      <SEOArticle title="How to Calculate CBM from Inches?">
         <p>
           Many suppliers, especially in the US, provide dimensions in inches. To calculate CBM from inches, 
           you first calculate Cubic Feet (CFT) and then convert to Cubic Meters.
@@ -70,10 +69,9 @@ const SEOContent = () => {
             </tbody>
           </table>
         </div>
-      </article>
+      </SEOArticle>
 
-      <article className="prose prose-slate max-w-none bg-white p-8 rounded-lg shadow-sm border border-slate-100">
-        <h2 className="text-2xl font-bold text-slate-800 mb-4">CBM to KG: Understanding Chargeable Weight</h2>
+      <SEOArticle title="CBM to KG: Understanding Chargeable Weight">
         <p>
           In freight shipping, you pay for either the actual weight (Gross Weight) or the volumetric weight, 
           whichever is greater. This is known as the "Chargeable Weight".
@@ -98,10 +96,9 @@ const SEOContent = () => {
         <p>
           For express couriers like DHL/FedEx/UPS, the divisor is often <strong>5000</strong>. Always check with your forwarder.
         </p>
-      </article>
+      </SEOArticle>
 
-      <article className="prose prose-slate max-w-none bg-white p-8 rounded-lg shadow-sm border border-slate-100">
-        <h2 className="text-2xl font-bold text-slate-800 mb-4">Container CBM Capacity: 20ft vs 40ft vs 40HQ</h2>
+      <SEOArticle title="Container CBM Capacity: 20ft vs 40ft vs 40HQ">
         <p>
           Knowing the capacity of standard shipping containers helps you plan your shipment and avoid paying for "dead air". 
           Although containers have a theoretical max volume, you can never fill them 100% due to carton shapes and packing inefficiencies.
@@ -142,10 +139,9 @@ const SEOContent = () => {
         <p className="text-sm text-slate-500 mt-2">
           * Note: We recommend planning for ~90% efficiency (Load Efficiency) to account for pallets, stacking gaps, and packaging expansion.
         </p>
-      </article>
+      </SEOArticle>
 
-      <article className="prose prose-slate max-w-none bg-white p-8 rounded-lg shadow-sm border border-slate-100">
-        <h2 className="text-2xl font-bold text-slate-800 mb-4">Shipping to Amazon FBA & Freight Class</h2>
+      <SEOArticle title="Shipping to Amazon FBA & Freight Class">
         <p>
           When shipping from China to Amazon FBA (Fulfillment by Amazon) centers in the US, precise CBM and weight calculations are mandatory.
         </p>
@@ -170,7 +166,7 @@ const SEOContent = () => {
           Heavy, dense items (like bricks) have low classes (e.g., Class 50) and are cheaper to ship. 
           Light, bulky items (like ping pong balls) have high classes (e.g., Class 500) and are expensive to ship.
         </p>
-      </article>
+      </SEOArticle>
     </div>
   );
 };

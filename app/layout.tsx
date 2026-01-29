@@ -1,12 +1,56 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#10b981",
+};
+
 export const metadata: Metadata = {
-  title: "CBM Calculator - Free Container Volume & Weight Tool",
+  title: {
+    default: "CBM Calculator - Free Container Volume & Weight Tool",
+    template: "%s | CBM Calculator",
+  },
   description: "Calculate CBM, Kg, and container loading for sea and air freight. Supports metric and imperial units with smart packing suggestions.",
+  keywords: ["CBM Calculator", "Cubic Meter Calculator", "Freight Calculator", "Shipping Volume", "Container Load", "Air Freight Volumetric Weight"],
+  authors: [{ name: "FreightCBM Team" }],
+  creator: "FreightCBM",
+  publisher: "FreightCBM",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://cbm-calculator.vercel.app"),
+  openGraph: {
+    title: "CBM Calculator - Free Container Volume & Weight Tool",
+    description: "Calculate CBM, Kg, and container loading for sea and air freight.",
+    url: "https://cbm-calculator.vercel.app",
+    siteName: "CBM Calculator",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CBM Calculator - Free Container Volume & Weight Tool",
+    description: "Calculate CBM, Kg, and container loading for sea and air freight.",
+    creator: "@FreightCBM",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -17,7 +61,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
