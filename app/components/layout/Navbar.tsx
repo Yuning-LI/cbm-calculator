@@ -9,7 +9,7 @@ export default function Navbar() {
           <span className="text-xl font-bold">FreightCBM</span>
         </div>
         <div className="space-x-4">
-          <a href="#" className="hover:text-emerald-500 transition">Calculator</a>
+          <a href="#guide" className="hover:text-emerald-500 transition">Guide</a>
         </div>
       </div>
     </nav>

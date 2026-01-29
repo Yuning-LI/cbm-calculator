@@ -6,10 +6,10 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} FreightCBM. All rights reserved.</p>
           <p>
             <a
-              href="https://github.com/Yuning-LI/cbm-calculator/issues"
+              href="mailto:support@cbmcalculator.com"
               className="text-emerald-600 hover:text-emerald-700 underline underline-offset-2"
             >
-              Report Bug
+              Contact Support
             </a>
           </p>
         </div>

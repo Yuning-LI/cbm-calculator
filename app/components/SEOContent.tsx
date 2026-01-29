@@ -1,173 +1,130 @@
-import React from 'react';
-import SEOArticle from './SEOArticle';
+import React from "react";
 
 const SEOContent = () => {
   return (
-    <div className="space-y-12">
-      <SEOArticle title="How to Calculate CBM (Cubic Meter)?">
+    <article id="guide" className="prose prose-slate max-w-none">
+      <section className="space-y-4">
+        <h2>How to Calculate CBM? (Formula)</h2>
         <p>
-          CBM (Cubic Meter) is the standard unit of volume used in international freight to determine shipping charges. 
-          Knowing how to calculate CBM accurately is crucial for optimizing your shipping costs.
+          If you are searching for how to calculate CBM, the most common method is to
+          calculate cbm formula in centimeters. The standard formula is:
+          Length (cm) x Width (cm) x Height (cm) / 1,000,000. This cbm calculator in cm
+          approach converts cubic centimeters into cubic meters for international freight.
         </p>
-        <h3 className="text-lg font-semibold text-slate-700 mt-4 mb-2">CBM Formula</h3>
         <p>
-          The basic formula for calculating CBM is:
+          Example: 50 cm x 40 cm x 30 cm = 60,000 cm³. 60,000 / 1,000,000 = 0.06 CBM.
+          If you ship 100 cartons, total volume is 6.00 CBM. This is the industry standard
+          for how to calculate cbm across sea and air freight.
         </p>
-        <div className="bg-slate-50 p-4 rounded-md font-mono text-sm border border-slate-200 my-4">
-          Length (cm) × Width (cm) × Height (cm) / 1,000,000 = CBM
-        </div>
-        <p>
-          <strong>Example Calculation:</strong><br />
-          If you have a carton with dimensions 50cm × 40cm × 30cm:
-        </p>
-        <ul className="list-disc pl-5 space-y-1">
-          <li>50 × 40 × 30 = 60,000 cubic centimeters</li>
-          <li>60,000 / 1,000,000 = 0.06 CBM</li>
-        </ul>
-        <p>
-          If you are shipping 100 such cartons, the total volume would be 0.06 × 100 = 6.00 CBM.
-        </p>
-      </SEOArticle>
+      </section>
 
-      <SEOArticle title="How to Calculate CBM from Inches?">
+      <section className="space-y-4">
+        <h2>CBM Calculator in Inches</h2>
         <p>
-          Many suppliers, especially in the US, provide dimensions in inches. To calculate CBM from inches, 
-          you first calculate Cubic Feet (CFT) and then convert to Cubic Meters.
+          Many US suppliers provide dimensions in inches, so a cbm calculator in inches
+          must convert to cubic feet first, then to CBM. The process is: inches to cubic
+          feet (CFT), then cubic feet to cbm. This is the most accurate cubic feet to cbm
+          workflow for freight quotes.
         </p>
-        <h3 className="text-lg font-semibold text-slate-700 mt-4 mb-2">Conversion Steps</h3>
-        <ol className="list-decimal pl-5 space-y-1">
-          <li><strong>Calculate CFT:</strong> Length (in) × Width (in) × Height (in) / 1,728 = Cubic Feet</li>
-          <li><strong>Convert to CBM:</strong> Cubic Feet / 35.315 = Cubic Meters</li>
-        </ol>
-        
-        <h3 className="text-lg font-semibold text-slate-700 mt-4 mb-2">Quick Conversion Table</h3>
+        <ul>
+          <li>Step 1: L x W x H (inches) / 1,728 = CFT</li>
+          <li>Step 2: CFT / 35.315 = CBM</li>
+        </ul>
         <div className="overflow-x-auto">
-          <table className="min-w-full text-sm text-left">
-            <thead className="bg-slate-50 text-slate-700 font-semibold">
+          <table>
+            <thead>
               <tr>
-                <th className="px-4 py-2 border">Unit</th>
-                <th className="px-4 py-2 border">Equivalent</th>
-                <th className="px-4 py-2 border">Common Use</th>
+                <th>Unit</th>
+                <th>Equivalent</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="px-4 py-2 border">1 CBM</td>
-                <td className="px-4 py-2 border">35.315 Cubic Feet</td>
-                <td className="px-4 py-2 border">Standard Sea Freight</td>
+                <td>1 CBM</td>
+                <td>35.315 CFT</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">1 CBM</td>
-                <td className="px-4 py-2 border">61,023 Cubic Inches</td>
-                <td className="px-4 py-2 border">Small Parcel</td>
+                <td>1 CBM</td>
+                <td>61,023 cubic inches</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">1 Cubic Foot</td>
-                <td className="px-4 py-2 border">0.0283 CBM</td>
-                <td className="px-4 py-2 border">US Domestic</td>
+                <td>1 CFT</td>
+                <td>0.0283 CBM</td>
               </tr>
             </tbody>
           </table>
         </div>
-      </SEOArticle>
+      </section>
 
-      <SEOArticle title="CBM to KG: Understanding Chargeable Weight">
+      <section className="space-y-4">
+        <h2>CBM to KG Calculator: Chargeable Weight</h2>
         <p>
-          In freight shipping, you pay for either the actual weight (Gross Weight) or the volumetric weight, 
-          whichever is greater. This is known as the "Chargeable Weight".
+          A cbm to kg calculator compares actual weight to volumetric weight to determine
+          chargeable weight. Sea freight typically uses a 1:1000 rule, while air freight
+          uses a volumetric weight divisor (often 1:167). Understanding volumetric weight
+          and the air freight divisor avoids surprise charges.
         </p>
-        
-        <h3 className="text-lg font-semibold text-slate-700 mt-4 mb-2">Sea Freight Logic (LCL)</h3>
-        <p>
-          The standard ratio for sea freight is <strong>1 CBM = 1,000 KG</strong>.
-        </p>
-        <ul className="list-disc pl-5 space-y-1">
-          <li>If your cargo is 1 CBM but weighs 500 KG, you are charged for 1 CBM (Volume).</li>
-          <li>If your cargo is 1 CBM but weighs 1,200 KG, you are charged for 1.2 CBM equivalent (Weight).</li>
+        <ul>
+          <li>Sea freight: 1 CBM = 1,000 KG for chargeable weight</li>
+          <li>Air freight: volumetric weight = L x W x H (cm) / 6,000 (1:167 rule)</li>
         </ul>
+        <p>
+          If the volumetric weight exceeds the gross weight, the carrier bills the higher
+          value. This rule is central to air freight pricing and volumetric weight planning.
+        </p>
+      </section>
 
-        <h3 className="text-lg font-semibold text-slate-700 mt-4 mb-2">Air Freight Logic</h3>
+      <section className="space-y-4">
+        <h2>CBM for Sea Shipment: 20ft & 40ft Containers</h2>
         <p>
-          Air freight uses a different volumetric divisor, typically <strong>6000</strong>.
+          For how to calculate cbm for sea shipment, container limits matter. Standard
+          capacities include 20ft container capacity, 40ft, and 40HQ. Our calculator applies
+          a 90% Load Efficiency rule to account for pallets, gaps, and box deformation.
         </p>
-        <div className="bg-slate-50 p-4 rounded-md font-mono text-sm border border-slate-200 my-4">
-          Volumetric Weight (kg) = Length (cm) × Width (cm) × Height (cm) / 6000
-        </div>
-        <p>
-          For express couriers like DHL/FedEx/UPS, the divisor is often <strong>5000</strong>. Always check with your forwarder.
-        </p>
-      </SEOArticle>
-
-      <SEOArticle title="Container CBM Capacity: 20ft vs 40ft vs 40HQ">
-        <p>
-          Knowing the capacity of standard shipping containers helps you plan your shipment and avoid paying for "dead air". 
-          Although containers have a theoretical max volume, you can never fill them 100% due to carton shapes and packing inefficiencies.
-        </p>
-        
-        <div className="overflow-x-auto mt-4">
-          <table className="min-w-full text-sm text-left">
-            <thead className="bg-slate-50 text-slate-700 font-semibold">
+        <div className="overflow-x-auto">
+          <table>
+            <thead>
               <tr>
-                <th className="px-4 py-2 border">Container Type</th>
-                <th className="px-4 py-2 border">Theoretical Volume</th>
-                <th className="px-4 py-2 border">Practical Volume (Rec.)</th>
-                <th className="px-4 py-2 border">Max Payload</th>
+                <th>Container</th>
+                <th>Theoretical CBM</th>
+                <th>Recommended (90%)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="px-4 py-2 border font-medium">20' GP (General Purpose)</td>
-                <td className="px-4 py-2 border">33.2 m³</td>
-                <td className="px-4 py-2 border text-emerald-600 font-bold">28 m³</td>
-                <td className="px-4 py-2 border">25,000 kg</td>
+                <td>20GP</td>
+                <td>33.2 m³</td>
+                <td>28 m³</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border font-medium">40' GP</td>
-                <td className="px-4 py-2 border">67.7 m³</td>
-                <td className="px-4 py-2 border text-emerald-600 font-bold">58 m³</td>
-                <td className="px-4 py-2 border">27,600 kg</td>
+                <td>40GP</td>
+                <td>67.7 m³</td>
+                <td>58 m³</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border font-medium">40' HQ (High Cube)</td>
-                <td className="px-4 py-2 border">76.3 m³</td>
-                <td className="px-4 py-2 border text-emerald-600 font-bold">68 m³</td>
-                <td className="px-4 py-2 border">28,500 kg</td>
+                <td>40HQ</td>
+                <td>76.3 m³</td>
+                <td>68 m³</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-slate-500 mt-2">
-          * Note: We recommend planning for ~90% efficiency (Load Efficiency) to account for pallets, stacking gaps, and packaging expansion.
-        </p>
-      </SEOArticle>
+      </section>
 
-      <SEOArticle title="Shipping to Amazon FBA & Freight Class">
+      <section className="space-y-4">
+        <h2>Shipping to Amazon FBA from China</h2>
         <p>
-          When shipping from China to Amazon FBA (Fulfillment by Amazon) centers in the US, precise CBM and weight calculations are mandatory.
-        </p>
-        
-        <h3 className="text-lg font-semibold text-slate-700 mt-4 mb-2">FBA Requirements</h3>
-        <ul className="list-disc pl-5 space-y-1">
-          <li><strong>Palletization:</strong> FBA shipments often require palletization. A standard US pallet (48"x40") adds weight and reduces usable volume.</li>
-          <li><strong>Labeling:</strong> Every carton must have FBA shipment labels with correct weight and dimensions.</li>
-        </ul>
-
-        <h3 className="text-lg font-semibold text-slate-700 mt-4 mb-2">Understanding Freight Class (LTL)</h3>
-        <p>
-          For Less Than Truckload (LTL) shipping within the US, carriers use <strong>Freight Class</strong> codes (NMFC).
+          Shipping from china to usa for Amazon FBA requires accurate carton labels,
+          palletization rules, and appointment scheduling. Always match the CBM with the
+          declared weight to avoid rework at the receiving dock.
         </p>
         <p>
-          Freight class is based on density (lbs per cubic foot). 
-          <span className="block mt-2 bg-yellow-50 p-2 border-l-4 border-yellow-400">
-            <strong>Rule of thumb:</strong> Lower density = Higher Freight Class = Higher Rate.
-          </span>
+          Freight class is used for LTL shipments in the USA. Lower density means higher
+          freight class and higher cost. Use correct measurements to avoid reclassification
+          fees and delays.
         </p>
-        <p>
-          Heavy, dense items (like bricks) have low classes (e.g., Class 50) and are cheaper to ship. 
-          Light, bulky items (like ping pong balls) have high classes (e.g., Class 500) and are expensive to ship.
-        </p>
-      </SEOArticle>
-    </div>
+      </section>
+    </article>
   );
 };
 

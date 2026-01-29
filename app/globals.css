@@ -7,3 +7,8 @@
     @apply bg-slate-50 text-slate-900;
   }
 }
+
+/* iOS safe area support for mobile sticky bottom bar */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}

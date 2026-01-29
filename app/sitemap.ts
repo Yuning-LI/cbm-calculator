@@ -1,14 +1,12 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from "next";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cbm-calculator.vercel.app' // Assuming Vercel URL, can be updated later
-  
   return [
     {
-      url: baseUrl,
+      url: "https://cbmcalculator.pro/",
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 1,
     },
-  ]
+  ];
 }

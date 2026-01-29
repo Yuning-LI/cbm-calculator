@@ -7,7 +7,6 @@ import InputRow from "./InputRow";
 import ResultCard from "./ResultCard";
 import ContainerBar from "./ContainerBar";
 import UnitToggle from "./UnitToggle";
-import SEOContent from "../SEOContent";
 import { Plus, RotateCcw } from "lucide-react";
 
 export default function Calculator() {
@@ -121,19 +120,15 @@ export default function Calculator() {
           </div>
         </div>
 
-        {/* SEO Content placed here to fill the left column blank space */}
-        <SEOContent />
       </div>
 
       <div className="lg:col-span-5 xl:col-span-4 relative" id="results-section">
         <div className="sticky top-24 space-y-6">
-          <ResultCard totals={totals} unit={unit} />
+          <ResultCard totals={totals} />
           <ContainerBar totalCbm={totals.cbm} />
-          
-           {/* Ad Placeholder */}
-           <div className="bg-slate-100 p-4 rounded-lg h-[280px] flex items-center justify-center text-slate-400 text-sm">
-              Ad Space (300x250)
-           </div>
+          <div className="bg-slate-100 p-4 rounded-lg h-[280px] flex items-center justify-center text-slate-400 text-sm hidden">
+            Ad Space (300x250)
+          </div>
         </div>
       </div>
       

@@ -1,6 +1,5 @@
 "use client";
 
-import { UnitSystem } from "../../lib/types";
 import { Package, Scale, Plane } from "lucide-react";
 
 interface ResultCardProps {
@@ -9,10 +8,9 @@ interface ResultCardProps {
     weightKg: number;
     volumetricWeightKg: number;
   };
-  unit: UnitSystem;
 }
 
-export default function ResultCard({ totals, unit }: ResultCardProps) {
+export default function ResultCard({ totals }: ResultCardProps) {
   const { cbm, weightKg, volumetricWeightKg } = totals;
   
   const cft = cbm * 35.3147;
