@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://cbm-calculator.vercel.app"),
+  metadataBase: new URL("https://cbm-calculator.com"),
   openGraph: {
     title: "CBM Calculator - Free Container Volume & Weight Tool",
     description: "Calculate CBM, Kg, and container loading for sea and air freight.",
-    url: "https://cbm-calculator.vercel.app",
+    url: "https://cbm-calculator.com",
     siteName: "CBM Calculator",
     locale: "en_US",
     type: "website",
@@ -50,6 +50,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  verification: {
+    google: "v4PDInxssBktOZ_6E-iw5HztoZhZSJSNOHtL_PhMYIM",
   },
 };
 

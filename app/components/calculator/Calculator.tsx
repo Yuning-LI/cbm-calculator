@@ -86,7 +86,7 @@ export default function Calculator() {
 
   return (
     <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 relative pb-20 md:pb-0">
-      <div className="xl:col-span-8 space-y-6">
+      <div className="order-1 xl:col-span-8 space-y-6">
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
           <div className="flex justify-between items-center mb-6">
             <UnitToggle unit={unit} onToggle={setUnit} />
@@ -120,11 +120,9 @@ export default function Calculator() {
             </button>
           </div>
         </div>
-        <SEOContent />
-
       </div>
 
-      <div className="xl:col-span-4 h-full relative" id="results-section">
+      <div className="order-2 xl:col-span-4 xl:row-span-2 relative h-full" id="results-section">
         <div className="sticky top-24 space-y-6">
           <ResultCard totals={totals} />
           <ContainerBar totalCbm={totals.cbm} />
@@ -132,6 +130,10 @@ export default function Calculator() {
             Ad Space (300x250)
           </div>
         </div>
+      </div>
+
+      <div className="order-3 xl:col-span-8">
+        <SEOContent />
       </div>
       
       {/* Mobile Sticky Bottom Bar */}

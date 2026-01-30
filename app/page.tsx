@@ -1,7 +1,6 @@
 import Calculator from "./components/calculator/Calculator";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import SEOContent from "./components/SEOContent";
 
 export default function Home() {
   return (
@@ -17,9 +16,6 @@ export default function Home() {
         </p>
         <div className="mt-6">
           <Calculator />
-        </div>
-        <div className="mt-12">
-          <SEOContent />
         </div>
       </main>
 

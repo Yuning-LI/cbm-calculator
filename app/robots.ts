@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://cbmcalculator.pro/sitemap.xml",
+    sitemap: "https://cbm-calculator.com/sitemap.xml",
   };
 }
