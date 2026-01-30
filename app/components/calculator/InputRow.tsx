@@ -17,32 +17,21 @@ export default function InputRow({ item, unit, onChange, onDelete, canDelete }: 
   const weightUnit = unit === "metric" ? "kg" : "lb";
 
   const handleChange = (field: keyof CargoItem, valueStr: string) => {
-    // If empty string, we pass 0, but user sees empty because we use value={item.x || ""}
-    // Wait, if we pass 0, item.x becomes 0. 0 || "" is "". So it works.
-    // But if user types "-", parseFloat("-") is NaN.
-    const value = parseFloat(valueStr);
-    
-    // For integer Qty
-    if (field === 'qty' && !isNaN(value)) {
-        // Requirement 2.3: Qty must be integer. Down floor.
-        // But if we floor immediately while typing, user can't type decimals if they wanted to?
-        // Requirement says "If decimal, floor it".
-        // Let's floor it on calculation or on blur? Real-time means maybe on change.
-        // Let's just pass the value and floor it in logic or here.
-        // "Qty: Must be integer... if decimal then floor"
-        // Let's keep it simple: pass the value, parent handles logic or we handle it here.
-        // To avoid jumping cursor, maybe just parse as int.
-        onChange(item.id, field, Math.floor(value));
-        return;
+    const rawValue = valueStr === "" ? 0 : Number(valueStr);
+    const safeValue = Number.isNaN(rawValue) ? 0 : rawValue;
+
+    if (field === "qty") {
+      onChange(item.id, field, Math.floor(safeValue));
+      return;
     }
-    
-    onChange(item.id, field, isNaN(value) ? 0 : value);
+
+    onChange(item.id, field, safeValue);
   };
 
   const renderInput = (
     label: string, 
     field: keyof CargoItem, 
-    value: number, 
+    value: number,
     placeholder: string = "0"
   ) => {
     const isError = value < 0;
@@ -53,7 +42,7 @@ export default function InputRow({ item, unit, onChange, onDelete, canDelete }: 
           <input
             type="number"
             min="0"
-            value={value === 0 ? "" : value} 
+            value={value || ""}
             onChange={(e) => handleChange(field, e.target.value)}
             className={clsx(
               "w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-colors",
