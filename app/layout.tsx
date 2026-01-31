@@ -71,12 +71,21 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               "name": "CBM Calculator",
+              "image": "https://cbm-calculator.com/icon",
+              "url": "https://cbm-calculator.com",
               "applicationCategory": "BusinessApplication",
-              "operatingSystem": "Web",
+              "operatingSystem": "Web, Android, iOS",
+              "price": "0",
+              "priceCurrency": "USD",
               "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD",
+              },
+              "author": {
+                "@type": "Organization",
+                "name": "CBM Calculator Team",
+                "url": "https://cbm-calculator.com",
               },
             }),
           }}
